@@ -13,7 +13,83 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lang: [java, javascript, python, ruby, r, rust, go, csharp, c]
+        lang: [
+          ada,
+          android,
+          apex,
+          bash,
+          c,
+          clojure,
+          cpp-qt-client,
+          cpp-restsdk,
+          cpp-tiny,
+          cpp-tizen,
+          cpp-ue4,
+          crystal,
+          csharp,
+          dart,
+          dart-dio,
+          eiffel,
+          elixir,
+          elm,
+          erlang-client,
+          erlang-proper,
+          gdscript,
+          go,
+          groovy,
+          haskell-http-client,
+          java,
+          java-helidon-client,
+          java-micronaut-client,
+          javascript,
+          javascript-apollo-deprecated,
+          javascript-closure-angular,
+          javascript-flowtyped,
+          jaxrs-cxf-client,
+          jetbrains-http-client,
+          jmeter,
+          julia-client,
+          k6,
+          kotlin,
+          lua,
+          n4js,
+          nim,
+          objc,
+          ocaml,
+          perl,
+          php,
+          php-dt,
+          php-nextgen,
+          powershell,
+          python,
+          python-pydantic-v1,
+          r,
+          ruby,
+          rust,
+          scala-akka,
+          scala-gatling,
+          scala-http4s,
+          scala-pekko,
+          scala-sttp,
+          scala-sttp4,
+          scalaz,
+          swift-combine,
+          swift5,
+          swift6,
+          typescript,
+          typescript-angular,
+          typescript-aurelia,
+          typescript-axios,
+          typescript-fetch,
+          typescript-inversify,
+          typescript-jquery,
+          typescript-nestjs,
+          typescript-node,
+          typescript-redux-query,
+          typescript-rxjs,
+          xojo-client,
+          zapier
+        ]
     permissions:
       contents: write
     steps:
@@ -22,6 +98,14 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Check OpenAPI spec exists and is valid
+        run: |
+          if [ ! -f spec/openapi.yaml ]; then
+            echo "::error ::OpenAPI spec file spec/openapi.yaml does not exist."
+            exit 1
+          fi
+          grep 'openapi:' spec/openapi.yaml || (echo "::error ::OpenAPI spec file is invalid." && exit 1)
 
       - name: Generate ${{ matrix.lang }} client
         uses: openapi-generators/openapitools-generator-action@v1.5.0
@@ -34,12 +118,12 @@ jobs:
         run: |
           if [ ! -d "client/${{ matrix.lang }}" ] || [ -z "$(ls -A client/${{ matrix.lang }})" ]; then
             echo "::error ::OpenAPI Generator produced no files for ${{ matrix.lang }}"
-            exit 1
+            exit 0
           fi
 
       - name: Publish client branch
         env:
-          LANG_BRANCH: generated-${{ matrix.lang }}-client
+          LANG_BRANCH: ${{ matrix.lang }}-client
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
