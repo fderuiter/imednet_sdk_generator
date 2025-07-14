@@ -1,0 +1,8 @@
+## SitesApi
+
+### List sites for a study
+## List sites for a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/sites?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

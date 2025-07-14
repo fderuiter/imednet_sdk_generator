@@ -1,0 +1,8 @@
+## JobsApi
+
+### Retrieve job status by batch ID
+## Retrieve job status by batch ID
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/jobs/{{batchId}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

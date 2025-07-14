@@ -1,0 +1,8 @@
+## SubjectsApi
+
+### List subjects in a study
+## List subjects in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/subjects?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

@@ -1,0 +1,8 @@
+## VariablesApi
+
+### List variables (fields) in a study
+## List variables (fields) in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/variables?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

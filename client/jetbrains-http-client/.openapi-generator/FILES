@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+Apis/AdministrationApi.http
+Apis/CodingsApi.http
+Apis/FormsApi.http
+Apis/IntervalsApi.http
+Apis/JobsApi.http
+Apis/QueriesApi.http
+Apis/RecordRevisionsApi.http
+Apis/RecordsApi.http
+Apis/SitesApi.http
+Apis/StudiesApi.http
+Apis/SubjectsApi.http
+Apis/VariablesApi.http
+Apis/VisitsApi.http
+Apis/http-client.template.env.json
+README.md

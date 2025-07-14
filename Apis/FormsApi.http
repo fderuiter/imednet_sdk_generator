@@ -1,0 +1,8 @@
+## FormsApi
+
+### List forms in a study
+## List forms in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/forms?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

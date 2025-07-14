@@ -1,0 +1,8 @@
+## StudiesApi
+
+### List studies accessible by API key
+## List studies accessible by API key
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

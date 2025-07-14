@@ -1,0 +1,39 @@
+## RecordsApi
+
+### Add new record or update subject/record data
+## Example request body for registering a new subject (via Registration form)
+POST https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/records
+Content-Type: application/json
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}
+
+
+
+### Add new record or update subject/record data
+## Example request body for updating a scheduled record
+POST https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/records
+Content-Type: application/json
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}
+
+
+
+### Add new record or update subject/record data
+## Example request body for creating a new record (for existing subject)
+POST https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/records
+Content-Type: application/json
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}
+
+
+
+
+### List records (eCRF instances) in a study
+## List records (eCRF instances) in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/records?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}&recordDataFilter={{recordDataFilter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

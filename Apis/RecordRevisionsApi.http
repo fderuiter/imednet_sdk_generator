@@ -1,0 +1,8 @@
+## RecordRevisionsApi
+
+### List record revisions (audit trail entries) in a study
+## List record revisions (audit trail entries) in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/recordRevisions?page={{page}}&size={{size}}&sort={{sort}}&filter={{filter}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}

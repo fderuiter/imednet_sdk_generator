@@ -1,0 +1,8 @@
+## AdministrationApi
+
+### List users and their roles in a study
+## List users and their roles in a study
+GET https://edc.prod.imednetapi.com/api/v1/edc/studies/{{studyKey}}/users?page={{page}}&size={{size}}&sort={{sort}}&includeInactive={{includeInactive}}
+Accept: application/json
+x-api-key: {{apiKey}}
+x-imn-security-key: {{apiKey}}
