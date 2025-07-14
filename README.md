@@ -1,3 +1,5 @@
+[![Generate OpenAPI clients](https://github.com/Bright-Research/imednet_sdk_collection/actions/workflows/generate-clients.yml/badge.svg)](https://github.com/Bright-Research/imednet_sdk_collection/actions/workflows/generate-clients.yml)
+
 # iMednet OpenAPI Client SDK Generator
 
 This project takes the **iMednet OpenAPI specification** (`spec/openapi.yaml`) and automatically generates client SDKs for all languages supported by the OpenAPI Generator using GitHub Actions workflows.
